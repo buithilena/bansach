@@ -20,8 +20,8 @@ public class DBContext {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 //          Hoanggggf
-            String connectionUrl = "jdbc:sqlserver://HOANGGGGF\\SQLEXPRESS:1433;databaseName=CuaHangSach;encrypt=false";            
-            conn = DriverManager.getConnection(connectionUrl, "sa", "123");
+            String connectionUrl = "jdbc:sqlserver://LEBAOKHANH:1433;databaseName=cuahangsach;encrypt=false";            
+            conn = DriverManager.getConnection(connectionUrl, "sa", "12345");
 
             
             System.out.println("Kết nối cơ sở dữ liệu thành công !");

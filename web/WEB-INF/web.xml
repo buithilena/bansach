@@ -4,8 +4,16 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>control.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>category</servlet-name>
+        <servlet-class>control.category</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>category</servlet-name>
+        <url-pattern>/category</url-pattern>
     </servlet-mapping>
 </web-app>

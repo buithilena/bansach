@@ -173,6 +173,46 @@ public class BooksDAO {
                 /* ignored */ }
         }
     }
+public List<Books> getBooksByCategory(String categoryId) {
+    List<Books> data = new ArrayList<>();
+    String query = "SELECT * FROM books WHERE category_id = ? AND statusDelete = 0";
+
+    try {
+        conn = new DBContext().getConnect();
+        ps = conn.prepareStatement(query);
+        ps.setString(1, categoryId);
+        rs = ps.executeQuery();
+
+        while (rs.next()) {
+            Books book = new Books(
+                    rs.getString("book_id"),
+                    rs.getString("book_name"),
+                    rs.getString("author_id"),
+                    rs.getString("category_id"),
+                    rs.getString("publish_id"),
+                    rs.getString("book_description"),
+                    rs.getFloat("book_price"),
+                    rs.getString("book_image"),
+                    rs.getInt("book_quantity_available"),
+                    rs.getBoolean("statusDelete")
+            );
+            data.add(book);
+        }
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    } finally {
+        try {
+            rs.close();
+        } catch (Exception e) { /* ignored */ }
+        try {
+            ps.close();
+        } catch (Exception e) { /* ignored */ }
+        try {
+            conn.close();
+        } catch (Exception e) { /* ignored */ }
+    }
+    return data;
+}
 
     public static void main(String[] args) {
         BooksDAO dao = new BooksDAO();
