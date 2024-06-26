@@ -41,7 +41,5 @@ public class Account {
     public String toString() {
         return "Account{" + "username=" + username + ", password=" + password + '}';
     }
-    
-    
-    
 }
+
