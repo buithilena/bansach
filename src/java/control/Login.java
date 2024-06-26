@@ -12,13 +12,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 
-/**
- *
- * @author admin
- */
+
+
 public class Login extends HttpServlet {
 
   
@@ -33,12 +30,14 @@ public class Login extends HttpServlet {
         if (acc == null) {
             request.setAttribute("message", "Tên đăng nhập hoặc mật khẩu không hợp lệ");
             request.getRequestDispatcher("DangKyDangNhap.jsp").forward(request, response);
-            //request.getRequestDispatcher("Login.jsp").forward(request, response);
+            request.getRequestDispatcher("Login.jsp").forward(request, response);
+            return;
+            
         }else{
             HttpSession session = request.getSession();//khai báo session
             session.setAttribute("acc", acc);//đẩy tài khoản login lên session "acc"
             session.setMaxInactiveInterval(60*60*24*365);//set thời gian sống cho session
-            //request.getRequestDispatcher("Home.jsp").forward(request, response);//trường hợp cần đẩy theo dữ liệu lên trang home để xử lý và đòng thời trả kết quả về cho một trang nào đó vd trang login.jsp
+            request.getRequestDispatcher("Home.jsp").forward(request, response);//trường hợp cần đẩy theo dữ liệu lên trang home để xử lý và đòng thời trả kết quả về cho một trang nào đó vd trang login.jsp
             response.sendRedirect("Home.jsp");//trường hợp này được sử dụng khi người dùng có dữ liệu hợp lệ không cần đẩy lên vì nếu dữ liệu hợp lện bản thân servlet home sẽ kiểm tra và load dữ liệu
         }
     }

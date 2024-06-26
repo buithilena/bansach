@@ -15,7 +15,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="max-w-md mx-auto mt-[80px] rounded-lg border-solid border-2 border-zinc-200 shadow-md hover:shadow-lg p-4">
                 <h1 class="text-2xl text-center my-3">LOGIN</h1>
-
+                
                 <form method="POST" action="Login">
                     <div class="form-group">
                         <label for="username">Username</label>
