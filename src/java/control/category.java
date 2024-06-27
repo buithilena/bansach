@@ -27,11 +27,11 @@ private final BooksDAO booksDao = new BooksDAO();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String categoryId = request.getParameter("id");
-        List<Books> books = booksDao.getBooksByCategory(categoryId);
-        request.setAttribute("books", books);
-        request.getRequestDispatcher("Home.jsp").forward(request, response);
-        processRequest(request, response);
+//        String categoryId = request.getParameter("id");
+//        List<Books> books = booksDao.getBookById(categoryId);
+//        request.setAttribute("books", books);
+//        request.getRequestDispatcher("Home.jsp").forward(request, response);
+//        processRequest(request, response);
     }
 
    
