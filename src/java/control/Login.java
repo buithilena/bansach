@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
@@ -6,6 +7,7 @@ package control;
 
 import DAO.Dao;
 import entity.Account;
+import entity.Customers;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -26,11 +28,11 @@ public class Login extends HttpServlet {
         String password = request.getParameter("password");
         
         Dao dao = new Dao();
-        Account acc = dao.Login(username, password);
+        Customers acc = dao.Login(username, password);
         if (acc == null) {
             request.setAttribute("message", "Tên đăng nhập hoặc mật khẩu không hợp lệ");
             request.getRequestDispatcher("DangKyDangNhap.jsp").forward(request, response);
-            request.getRequestDispatcher("Login.jsp").forward(request, response);
+//            request.getRequestDispatcher("Login.jsp").forward(request, response);
             return;
             
         }else{
@@ -60,5 +62,8 @@ public class Login extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
+    
+    public static void main(String[] args) {
+        
+    }
 }
