@@ -3,9 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/java/Source/bookstore/bansach/src/java/DAO/BooksDAO.java</file>
-            <file>file:/D:/java/Source/bookstore/bansach/src/java/DAO/AuthorsDAO.java</file>
-            <file>file:/D:/java/Source/bookstore/bansach/src/java/entity/Books.java</file>
+            <file>file:/E:/servlet/bansach/bansach/src/java/DAO/BooksDAO.java</file>
+            <file>file:/E:/servlet/bansach/bansach/web/DangKyDangNhap.jsp</file>
+            <file>file:/E:/servlet/bansach/bansach/web/client/index.jsp</file>
+            <file>file:/E:/servlet/bansach/bansach/src/java/DAO/AuthorsDAO.java</file>
+            <file>file:/E:/servlet/bansach/bansach/web/index.html</file>
+            <file>file:/E:/servlet/bansach/bansach/web/client/layout/HomeLayout.css</file>
+            <file>file:/E:/servlet/bansach/bansach/web/client/layout/HomeLayout.jsp</file>
+            <file>file:/E:/servlet/bansach/bansach/src/java/entity/Account.java</file>
+            <file>file:/E:/servlet/bansach/bansach/web/client/content/HomeContent.jsp</file>
+            <file>file:/E:/servlet/bansach/bansach/web/client/footer/FooterHome.jsp</file>
+            <file>file:/E:/servlet/bansach/bansach/src/java/control/Login.java</file>
+            <file>file:/E:/servlet/bansach/bansach/src/java/control/category.java</file>
+            <file>file:/E:/servlet/bansach/bansach/nbproject/build-impl.xml</file>
+            <file>file:/E:/servlet/bansach/bansach/src/java/context/DBContext.java</file>
+            <file>file:/E:/servlet/bansach/bansach/src/java/DAO/CategoriesDAO.java</file>
+            <file>file:/E:/servlet/bansach/bansach/web/client/header/HeaderHome.jsp</file>
+            <file>file:/E:/servlet/bansach/bansach/web/client/content/HomeCategory.jsp</file>
+            <file>file:/E:/servlet/bansach/bansach/src/java/entity/Books.java</file>
         </group>
     </open-files>
 </project-private>

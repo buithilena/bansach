@@ -20,30 +20,7 @@
         <%@ include file="/client/header/HeaderHome.jsp" %>
     </header>
   <main>
-        <section class="books">
-            <div class="container" >
-                <h2>Books idfn Category</h2>
-                <ul class="book-list">
-                    <%
-                        List<Books> books = (List<Books>) request.getAttribute("books");
-                        if (books != null) {
-                            for (Books book : books) {
-                    %>
-                        <li>
-                            <a href="#">
-                      
-                                <h3><%= book.getBook_name() %></h3>
-                                <p><%= book.getAuthor_id() %></p>
-                                <span class="price"><%= book.getBook_price() %> VNĐ</span>
-                            </a>
-                        </li>
-                    <%
-                            }
-                        }
-                    %>
-                </ul>
-            </div>
-        </section>
+        
     </main>
     <footer>
         <%@ include file="/client/footer/FooterHome.jsp" %>
