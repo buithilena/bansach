@@ -6,45 +6,43 @@ package control;
 
 import DAO.BooksDAO;
 import entity.Books;
+import jakarta.servlet.RequestDispatcher;
+import java.io.IOException;
+import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
-
+/**
+ *
+ * @author baokhanh
+ */
 public class category extends HttpServlet {
-private final BooksDAO booksDao = new BooksDAO();
- 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
-    }
-
-    
+private final BooksDAO booksDAO = new BooksDAO();
+  
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
 //        String categoryId = request.getParameter("id");
-//        List<Books> books = booksDao.getBookById(categoryId);
+//        List<Books> books = booksDAO.getBooksByCategory(categoryId);
 //        request.setAttribute("books", books);
-//        request.getRequestDispatcher("Home.jsp").forward(request, response);
+//        RequestDispatcher dispatcher = request.getRequestDispatcher("category.jsp");
+//        dispatcher.forward(request, response);
 //        processRequest(request, response);
     }
 
-   
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    
+  
+  
     @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private void processRequest(HttpServletRequest request, HttpServletResponse response) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 }

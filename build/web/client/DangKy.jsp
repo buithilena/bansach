@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 
@@ -14,9 +15,21 @@
     <nav>
         <div class="max-w-7xl mx-auto">
             <div class="max-w-md mx-auto mt-[80px] rounded-lg border-solid border-2 border-zinc-200 shadow-md hover:shadow-lg p-4">
-                <h1 class="text-2xl text-center my-3">LOGIN</h1>
+                <h1 class="text-2xl text-center my-3">SignUp</h1>
                 
                 <form method="POST" action="Login">
+                    <div class="form-group">
+                        <label for="username">Tên Khách Hàng</label>
+                        <input type="text" class="form-control" id="username" name="tenkh" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Địa Chỉ</label>
+                        <input type="text" class="form-control" id="username" name="diachi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Số Điện Thoại</label>
+                        <input type="text" class="form-control" id="username" name="sdt" required>
+                    </div>
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" class="form-control" id="username" name="username" required>
@@ -26,7 +39,8 @@
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
-                    <button type="submit" class="btn btn-success w-full my-3">Submit</button>
+                    <button type="submit" class="btn btn-success w-full my-3">SignUp</button>
+                    <button type="submit" class="btn btn-success w-full my-3"herf="index.jsp">Thoát</button>
                 </form>
             </div>
         </div>
