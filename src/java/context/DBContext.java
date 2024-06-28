@@ -1,17 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package context;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author admin
- */
+
 public class DBContext {
     protected Connection conn;
 
@@ -20,8 +14,8 @@ public class DBContext {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 //          Hoanggggf
-            String connectionUrl = "jdbc:sqlserver://HOANGGGGF\\SQLEXPRESS:1433;databaseName=CuaHangSach;encrypt=false";            
-            conn = DriverManager.getConnection(connectionUrl, "sa", "123");
+            String connectionUrl = "jdbc:sqlserver://LAPTOP-HLRA9EFE\\SQLEXPRESS:1433;databaseName=CuaHangSach;encrypt=false";            
+            conn = DriverManager.getConnection(connectionUrl, "sa", "123456");
 
             
             System.out.println("Kết nối cơ sở dữ liệu thành công !");
