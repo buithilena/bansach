@@ -8,7 +8,19 @@
 <%@page import="java.util.List" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
-
+    <style>
+        .card {
+            height: 500px; /* Chiều cao cố định cho các thẻ card */
+             border: 2px solid #000;
+        }
+        .card-img-top {
+            height: 300px; /* Chiều cao cố định cho hình ảnh */
+            object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+        }
+        .card-body {
+            overflow: hidden; /* Ẩn nội dung tràn */
+        }
+    </style>
    
 </head>
   <div class="container-fluid fruite py-5">
@@ -110,18 +122,18 @@
             %>
             <div class="col-sm-4">
                 <div class="card" style="margin-bottom: 20px;">
+                    <img src="<%= book.getBook_image() %>" class="card-img-top" alt="Book Image">
                     <div class="card-body">
                         <h5 class="card-title"><%= book.getBook_name() %></h5>
-                        <p class="card-text"><strong>Author:</strong> <%= book.getAuthor_id() %></p>
-                        <p class="card-text"><strong>Category:</strong> <%= book.getCategory_id() %></p>
-                        <p class="card-text"><strong>Publisher:</strong> <%= book.getPublish_id() %></p>
+               
+                   
               
                         <p class="card-text"><strong>Price:</strong> $<%= book.getBook_price() %></p>
                         <p class="card-text"><strong>Quantity Available:</strong> <%= book.getBook_quantity_available() %></p>
                         <a href="#" class="btn btn-primary">Add To Cart</a>
                          <a href="/client/layout/ViewProductLayout.jsp?book_id=<%= book.getBook_id() %>" class="btn btn-primary">Detail</a>
                     </div>
-                </div>
+                </div>a
             </div>
             <%
                 }

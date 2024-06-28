@@ -8,7 +8,23 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-  
+    <head>
+ <style>
+        .card {
+            border: 2px solid #000; /* Đường viền dày và màu đen */
+        }
+        .card-img-top {
+            height: 300px; /* Giảm chiều cao của hình ảnh */
+            object-fit: contain; /* Đảm bảo hình ảnh không bị méo và toàn bộ ảnh được hiển thị */
+        }
+        .book-image {
+            width: 100%;
+            height: 300px; /* Giảm chiều cao của hình ảnh */
+            object-fit: contain; /* Đảm bảo hình ảnh không bị méo và toàn bộ ảnh được hiển thị */
+        }
+    </style>
+   
+    </head>
     <body>
    
          <div class="container-fluid py-5 mt-5">
@@ -25,7 +41,10 @@
             if (book != null) {
         %>
         <div class="card">
+             <img src="<%= book.getBook_image() %>" class="card-img-top book-image" alt="Book Image">
+                            
             <div class="card-body">
+                
                 <h5 class="card-title"><%= book.getBook_name() %></h5>
                 <p class="card-text"><strong>Author:</strong> <%= book.getAuthor_id() %></p>
                 <p class="card-text"><strong>Category:</strong> <%= book.getCategory_id() %></p>
