@@ -1,0 +1,188 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 27, 2024, 4:04:04 PM
+    Author     : baokhanh
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* Header */
+.header {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background-color: #f0f0f0;
+  padding: 80px 0;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-content {
+  width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-image {
+  width: 50%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Products */
+.products {
+  padding: 80px 0;
+}
+
+.products .container {
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 250px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product p {
+  font-size: 16px;
+}
+
+.product .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+}
+
+.testimonials .container {
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.testimonial-slider {
+  display: flex;
+}
+
+.testimonial {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;}
