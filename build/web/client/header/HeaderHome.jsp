@@ -42,6 +42,14 @@
             text-decoration: none; /* Remove underline */       
         }
        
+   
+        .login-button {
+    margin-left: auto; /* Đẩy nút "Login" sang bên phải */
+    padding: 10px 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
     </style>
 
     </head>
@@ -71,8 +79,8 @@
   <a href="/client/layout/ShopLayout.jsp" class="button">Shop</a>
   <a href="#" class="button">Cart</a>
   <a href="#" class="button">Contact</a>
-    <input>
-    <a href="#" class="button">Login</a>
+    
+    <a href="#" class="button login-button"name ="login">Login</a>
                     </nav>
                   
                 </div>
