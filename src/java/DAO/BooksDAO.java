@@ -39,10 +39,12 @@ public class BooksDAO {
         }
         return null;
     }
+    
+  
 
     public List<Books> getAllBooks() {
         List<Books> data = new ArrayList<>();
-        String query = "SELECT * FROM books where statusDelete = 0";
+        String query = "select * from books where statusDelete = 0";
 
         try {
             conn = new DBContext().getConnect();
@@ -180,7 +182,7 @@ public class BooksDAO {
 
 //        boolean data = dao.deleteBookById("B1"); 
 //        System.out.println(data);
-        Books book = new Books( "Yoenggg", "AU001", "CT001", "PB001", "Yoengggg", (float) 9999, "Yoenggg", 1000, Boolean.FALSE);
+        Books book = new Books("Yoenggg", "AU001", "CT001", "PB001", "Yoengggg", (float) 9999, "Yoenggg", 1000, Boolean.FALSE);
         boolean res = dao.createBook(book);
         List<Books> data = dao.getAllBooks();
         for (var item : data) {
