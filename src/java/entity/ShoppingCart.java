@@ -19,6 +19,14 @@ public class ShoppingCart {
     public ShoppingCart() {
     }
 
+    public ShoppingCart(String customer_id, String book_id, String payment_id, int shopping_cart_quantity, Boolean statusDelete) {
+        this.customer_id = customer_id;
+        this.book_id = book_id;
+        this.payment_id = payment_id;
+        this.shopping_cart_quantity = shopping_cart_quantity;
+        this.statusDelete = statusDelete;
+    }
+
     public ShoppingCart(String shopping_cart_id, String customer_id, String book_id, String payment_id, int shopping_cart_quantity, Boolean statusDelete) {
         this.shopping_cart_id = shopping_cart_id;
         this.customer_id = customer_id;

@@ -16,6 +16,11 @@ public class Publishes {
     public Publishes() {
     }
 
+    public Publishes(String publish_name, Boolean statusDelete) {
+        this.publish_name = publish_name;
+        this.statusDelete = statusDelete;
+    }
+
     public Publishes(String publish_id, String publish_name, Boolean statusDelete) {
         this.publish_id = publish_id;
         this.publish_name = publish_name;

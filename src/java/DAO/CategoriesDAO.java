@@ -130,14 +130,13 @@ public class CategoriesDAO {
     }
     
     public Boolean createCategory(Categories cate) {
-        String query = "insert into categories (category_id, category_name, statusDelete) values ( ?, ?, ?)";
+        String query = "insert into categories (category_name, statusDelete) values (?, ?)";
         try {
             conn = new DBContext().getConnect();
             ps = conn.prepareStatement(query);
 
-            ps.setString(1, cate.getCategory_id());
-            ps.setString(2, cate.getCategory_name());
-            ps.setBoolean(3, cate.getStatusDelete());
+            ps.setString(1, cate.getCategory_name());
+            ps.setBoolean(2, cate.getStatusDelete());
 
             int rowsInserted = ps.executeUpdate();
 
@@ -164,10 +163,7 @@ public class CategoriesDAO {
 //        Categories data = dao.getCategoryById("1");
 //        System.out.println(data);
 
-//        List<Categories> data = dao.getAllCategories(); 
-//        for(var item : data) {
-//            System.out.println(item);
-//        }
+        
 
 //        boolean data = dao.deleteCategoryById("1"); 
 //        System.out.println(data);
@@ -177,8 +173,12 @@ public class CategoriesDAO {
 //        System.out.println(data);
 
 
-//        Categories cate = new Categories("11", "Fish", false); 
-//        Boolean data = dao.createCategory(cate); 
-//        System.out.println(data);
+        Categories cate = new Categories("Fish", false); 
+        Boolean res = dao.createCategory(cate); 
+        
+        List<Categories> data = dao.getAllCategories(); 
+        for(var item : data) {
+            System.out.println(item);
+        }
     }
 }

@@ -23,6 +23,18 @@ public class Books {
     public Books() {
     }
 
+    public Books(String book_name, String author_id, String category_id, String publish_id, String book_description, Float book_price, String book_image, int book_quantity_available, Boolean statusDelete) {
+        this.book_name = book_name;
+        this.author_id = author_id;
+        this.category_id = category_id;
+        this.publish_id = publish_id;
+        this.book_description = book_description;
+        this.book_price = book_price;
+        this.book_image = book_image;
+        this.book_quantity_available = book_quantity_available;
+        this.statusDelete = statusDelete;
+    }
+
     public Books(String book_id, String book_name, String author_id, String category_id, String publish_id, String book_description, Float book_price, String book_image, int book_quantity_available, Boolean statusDelete) {
         this.book_id = book_id;
         this.book_name = book_name;

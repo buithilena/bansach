@@ -138,16 +138,15 @@ public class AuthorsDAO {
     }
 
     public Boolean createAuthor(Authors author) {
-        String query = "INSERT INTO authors (author_id, author_name, author_bio, statusDelete) VALUES (?, ?, ?, ?)";
+        String query = "INSERT INTO authors ( author_name, author_bio, statusDelete) VALUES ( ?, ?, ?)";
 
         try {
             conn = new DBContext().getConnect();
             ps = conn.prepareStatement(query);
 
-            ps.setString(1, author.getAuthor_id());
-            ps.setString(2, author.getAuthor_name());
-            ps.setString(3, author.getAuthor_bio());
-            ps.setBoolean(4, false);
+            ps.setString(1, author.getAuthor_name());
+            ps.setString(2, author.getAuthor_bio());
+            ps.setBoolean(3, false);
 
             int rowsInserted = ps.executeUpdate();
 
@@ -174,18 +173,18 @@ public class AuthorsDAO {
 //        Authors author = dao.getAuthorById("1");
 //        System.out.println(author);
 //        
-        List<Authors> list = dao.getAllAuthors();
-        for(Authors item : list) {
-            System.out.println(item);
-        }
 //        
 //        boolean res = dao.deleteAuthorById("1");
 //        System.out.println(res);
 //          Authors author = new Authors("2", "Yoenggg", "Yoeng is mine", Boolean.FALSE);
 //          boolean res = dao.editAuthorById(author);
 //          System.out.println(res);
-//        Authors author = new Authors("11", "Fish", "Fish of yoenggg", false);
-//        boolean res = dao.createAuthor(author);
-//        System.out.println(res);
+        Authors author = new Authors("Fish", "Fish of yoenggg", false);
+        boolean res = dao.createAuthor(author);
+        System.out.println(res);
+        List<Authors> list = dao.getAllAuthors();
+        for (Authors item : list) {
+            System.out.println(item);
+        }
     }
 }

@@ -16,6 +16,11 @@ public class Payments {
     public Payments() {
     }
 
+    public Payments(Float total_price, Boolean statusDelete) {
+        this.total_price = total_price;
+        this.statusDelete = statusDelete;
+    }
+
     public Payments(String payment_id, Float total_price, Boolean statusDelete) {
         this.payment_id = payment_id;
         this.total_price = total_price;
