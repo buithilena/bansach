@@ -133,7 +133,7 @@
                         <a href="#" class="btn btn-primary">Add To Cart</a>
                          <a href="/client/layout/ViewProductLayout.jsp?book_id=<%= book.getBook_id() %>" class="btn btn-primary">Detail</a>
                     </div>
-                </div>a
+                </div>
             </div>
             <%
                 }
