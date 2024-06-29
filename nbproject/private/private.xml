@@ -3,7 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/java/Source/bookstore/bansach/web/DangKyDangNhap.jsp</file>
+=======
+            <file>file:/D:/BTJAVA/BTCNJAVA/bansach/web/client/index.jsp</file>
+            <file>file:/D:/BTJAVA/BTCNJAVA/bansach/web/WEB-INF/web.xml</file>
+            <file>file:/D:/BTJAVA/BTCNJAVA/bansach/web/client/DangNhap.jsp</file>
+            <file>file:/D:/BTJAVA/BTCNJAVA/bansach/src/java/control/Login.java</file>
+>>>>>>> 8af0652956aabf4ad7253c35a02db3308141b60e
         </group>
     </open-files>
 </project-private>
