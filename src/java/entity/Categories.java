@@ -16,6 +16,11 @@ public class Categories {
     public Categories() {
     }
 
+    public Categories(String category_name, Boolean statusDelete) {
+        this.category_name = category_name;
+        this.statusDelete = statusDelete;
+    }
+
     public Categories(String category_id, String category_name, Boolean statusDelete) {
         this.category_id = category_id;
         this.category_name = category_name;

@@ -135,15 +135,14 @@ public class PublishesDAO {
     }
 
     public Boolean createPublish(Publishes publi) {
-        String query = "INSERT INTO publishes (publish_id, publish_name, statusDelete) VALUES (?, ?, ?)";
+        String query = "INSERT INTO publishes (publish_name, statusDelete) VALUES (?, ?)";
 
         try {
             conn = new DBContext().getConnect();
             ps = conn.prepareStatement(query);
 
-            ps.setString(1, publi.getPublish_id());
-            ps.setString(2, publi.getPublish_name());
-            ps.setBoolean(3, false);
+            ps.setString(1, publi.getPublish_name());
+            ps.setBoolean(2, false);
 
             int rowsInserted = ps.executeUpdate();
 
@@ -169,18 +168,17 @@ public class PublishesDAO {
 
 //        Publishes data = dao.getPublishById("1"); 
 //        System.out.println(data);
-//        List<Publishes> data = dao.getAllPublishes(); 
-//        for(var item : data) {
-//            System.out.println(item);
-//        }
 //        boolean data = dao.deletePublishById("1");
 //        System.out.println(data);
 //        Publishes pub = new Publishes("1", "Yoenggg", false); 
 //        boolean data = dao.editPublishById(pub);
 //        System.out.println(data);
+        Publishes pub = new Publishes( "Yoenggg", false);
+        dao.createPublish(pub);
 
-        Publishes pub = new Publishes("11", "Yoenggg", false);
-        boolean data = dao.createPublish(pub); 
-        System.out.println(data);
+        List<Publishes> data = dao.getAllPublishes();
+        for (var item : data) {
+            System.out.println(item);
+        }
     }
 }

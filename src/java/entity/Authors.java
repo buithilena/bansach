@@ -13,9 +13,14 @@ public class Authors {
     private String author_name; 
     private String author_bio; 
     private Boolean statusDelete;
-
     
     public Authors() {
+    }
+
+    public Authors(String author_name, String author_bio, Boolean statusDelete) {
+        this.author_name = author_name;
+        this.author_bio = author_bio;
+        this.statusDelete = statusDelete;
     }
     
     
@@ -25,7 +30,8 @@ public class Authors {
         this.author_bio = author_bio;
         this.statusDelete = statusDelete;
     }
-
+    
+ 
     public String getAuthor_id() {
         return author_id;
     }

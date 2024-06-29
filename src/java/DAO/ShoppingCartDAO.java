@@ -130,19 +130,17 @@ public class ShoppingCartDAO {
     }
 
     public Boolean createShoppingCart(ShoppingCart sc) {
-        String query = "INSERT INTO shopping_cart (shopping_cart_id, customer_id, book_id, payment_id, shopping_cart_quantity, statusDelete) VALUES (?, ?, ?, ?, ?, ?)";
-        
-        
+        String query = "INSERT INTO shopping_cart (customer_id, book_id, payment_id, shopping_cart_quantity, statusDelete) VALUES (?, ?, ?, ?, ?)";
+
         try {
             conn = new DBContext().getConnect();
             ps = conn.prepareStatement(query);
 
-            ps.setString(1, sc.getShopping_cart_id());
-            ps.setString(2, sc.getCustomer_id());
-            ps.setString(3, sc.getBook_id());
-            ps.setString(4, sc.getPayment_id());
-            ps.setInt(5, sc.getShopping_cart_quantity());
-            ps.setBoolean(6, sc.getStatusDelete());
+            ps.setString(1, sc.getCustomer_id());
+            ps.setString(2, sc.getBook_id());
+            ps.setString(3, sc.getPayment_id());
+            ps.setInt(4, sc.getShopping_cart_quantity());
+            ps.setBoolean(5, sc.getStatusDelete());
 
             int rowsInserted = ps.executeUpdate();
 
@@ -162,25 +160,23 @@ public class ShoppingCartDAO {
                 /* ignored */ }
         }
     }
-    
+
     public static void main(String[] args) {
         ShoppingCartDAO dao = new ShoppingCartDAO();
 //        ShoppingCart data = dao.getShoppingCartById("SC1"); 
 //        System.out.println(data);
 
-//        List<ShoppingCart> data = dao.getAllShoppingCart(); 
-//        for(var item : data) {
-//            System.out.println(item);
-//        }
 //        boolean data = dao.deleteShoppingCart("SC1"); 
 //        System.out.println(data);
 //        ShoppingCart sc = new ShoppingCart("SC9", "1", "B1", "1", 1, Boolean.FALSE);
 //        boolean data = dao.editShoppingCart(sc);
 //        System.out.println(data);
-        
-        
-        ShoppingCart sc = new ShoppingCart("SC11", "1", "B1", "1", 1, Boolean.FALSE);
-        boolean data = dao.createShoppingCart(sc);
-        System.out.println(data);
+        ShoppingCart sc = new ShoppingCart( "CU001", "BK001", "PM001", 1, Boolean.FALSE);
+        dao.createShoppingCart(sc);
+        List<ShoppingCart> data = dao.getAllShoppingCart();
+        for (var item : data) {
+            System.out.println(item);
+        }
+
     }
 }

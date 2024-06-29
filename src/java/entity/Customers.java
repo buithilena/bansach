@@ -21,6 +21,16 @@ public class Customers {
     public Customers() {
     }
 
+    public Customers(String customer_name, String customer_address, String customer_phone, String customer_username, String customer_password, String customer_role, Boolean statusDelete) {
+        this.customer_name = customer_name;
+        this.customer_address = customer_address;
+        this.customer_phone = customer_phone;
+        this.customer_username = customer_username;
+        this.customer_password = customer_password;
+        this.customer_role = customer_role;
+        this.statusDelete = statusDelete;
+    }
+
     public Customers(String customer_id, String customer_name, String customer_address, String customer_phone, String customer_username, String customer_password, String customer_role, Boolean statusDelete) {
         this.customer_id = customer_id;
         this.customer_name = customer_name;

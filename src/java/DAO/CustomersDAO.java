@@ -147,20 +147,19 @@ public class CustomersDAO {
     }
 
     public Boolean createCustomer(Customers cust) {
-        String query = "INSERT INTO customers (customer_id, customer_name, customer_address, customer_phone, customer_username, customer_password, customer_role, statusDelete) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO customers (customer_name, customer_address, customer_phone, customer_username, customer_password, customer_role, statusDelete) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try {
             conn = new DBContext().getConnect();
             ps = conn.prepareStatement(query);
 
-            ps.setString(1, cust.getCustomer_id());
-            ps.setString(2, cust.getCustomer_name());
-            ps.setString(3, cust.getCustomer_address());
-            ps.setString(4, cust.getCustomer_phone());
-            ps.setString(5, cust.getCustomer_username());
-            ps.setString(6, cust.getCustomer_password());
-            ps.setString(7, cust.getCustomer_role());
-            ps.setBoolean(8, cust.getStatusDelete());
+            ps.setString(1, cust.getCustomer_name());
+            ps.setString(2, cust.getCustomer_address());
+            ps.setString(3, cust.getCustomer_phone());
+            ps.setString(4, cust.getCustomer_username());
+            ps.setString(5, cust.getCustomer_password());
+            ps.setString(6, cust.getCustomer_role());
+            ps.setBoolean(7, cust.getStatusDelete());
 
             int rowsInserted = ps.executeUpdate();
 
@@ -181,7 +180,6 @@ public class CustomersDAO {
                 /* ignored */
             }
         }
-
     }
 
     public static void main(String[] args) {
@@ -189,17 +187,17 @@ public class CustomersDAO {
 
 //        Customers data = dao.getCustomerById("1");
 //        System.out.println(data);
-//        List<Customers> data = dao.getAllCustomer(); 
-//        for(var item : data) {
-//            System.out.println(item);
-//        }
 //        boolean data = dao.deleteCustomerById("1");
 //        System.out.println(data);
 //        Customers record = new Customers("1", "Yoengggg", "Yoengggg", "Yoengggg", "Yoengggg", "Yoengggg", "admin", Boolean.FALSE);
 //        boolean data = dao.editCustomerById(record); 
 //        System.out.println(data);
-        Customers record = new Customers("11", "Yoengggg", "Yoengggg", "Yoengggg", "Yoengggg", "Yoengggg", "admin", Boolean.FALSE);
-        boolean data = dao.createCustomer(record);
-        System.out.println(data);
+        Customers record = new Customers("Yoengggg", "Yoengggg", "Yoengggg", "Yoengggg", "Yoengggg", "admin", Boolean.FALSE);
+        dao.createCustomer(record);
+
+        List<Customers> data = dao.getAllCustomer();
+        for (var item : data) {
+            System.out.println(item);
+        }
     }
 }

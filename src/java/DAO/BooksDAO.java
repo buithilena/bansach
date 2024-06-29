@@ -139,21 +139,20 @@ public class BooksDAO {
     }
 
     public Boolean createBook(Books book) {
-        String query = "INSERT INTO books (book_id, book_name, author_id, category_id, publish_id, book_description, book_price, book_image, book_quantity_available, statusDelete) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO books (book_name, author_id, category_id, publish_id, book_description, book_price, book_image, book_quantity_available, statusDelete) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             conn = new DBContext().getConnect();
             ps = conn.prepareStatement(query);
 
-            ps.setString(1, book.getBook_id()); 
-            ps.setString(2, book.getBook_name()); 
-            ps.setString(3, book.getAuthor_id());
-            ps.setString(4, book.getCategory_id()); 
-            ps.setString(5, book.getPublish_id()); 
-            ps.setString(6, book.getBook_description());
-            ps.setFloat(7, book.getBook_price());
-            ps.setString(8, book.getBook_image()); 
-            ps.setInt(9, book.getBook_quantity_available()); 
-            ps.setBoolean(10, book.getStatusDelete());
+            ps.setString(1, book.getBook_name());
+            ps.setString(2, book.getAuthor_id());
+            ps.setString(3, book.getCategory_id());
+            ps.setString(4, book.getPublish_id());
+            ps.setString(5, book.getBook_description());
+            ps.setFloat(6, book.getBook_price());
+            ps.setString(7, book.getBook_image());
+            ps.setInt(8, book.getBook_quantity_available());
+            ps.setBoolean(9, book.getStatusDelete());
 
             int rowsInserted = ps.executeUpdate();
 
@@ -179,14 +178,13 @@ public class BooksDAO {
         //        Books data = dao.getBookById("B1");
         //        System.out.println(data);
 
-//        List<Books> data = dao.getAllBooks(); 
-//        for(var item : data) {
-//            System.out.println(item);
-//        }
 //        boolean data = dao.deleteBookById("B1"); 
 //        System.out.println(data);
-        Books book = new Books("B18", "Yoenggg", "1", "1", "1", "Yoengggg", (float) 9999, "Yoenggg", 1000, Boolean.FALSE);
+        Books book = new Books( "Yoenggg", "AU001", "CT001", "PB001", "Yoengggg", (float) 9999, "Yoenggg", 1000, Boolean.FALSE);
         boolean res = dao.createBook(book);
-        System.out.println(res);
+        List<Books> data = dao.getAllBooks();
+        for (var item : data) {
+            System.out.println(item);
+        }
     }
 }
