@@ -180,7 +180,6 @@ public class CustomersDAO {
                 /* ignored */
             }
         }
-
     }
 
     public static void main(String[] args) {

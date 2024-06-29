@@ -15,7 +15,7 @@ public class DBContext {
             
 //          Hoanggggf
 
-            String connectionUrl = "jdbc:sqlserver://HOANGGGGF\\SQLEXPRESS:1433;databaseName=thisIsBookStore;encrypt=false";            
+            String connectionUrl = "jdbc:sqlserver://HOANGGGGF\\SQLEXPRESS:1433;databaseName=thisIsBookStoree;encrypt=false";            
             conn = DriverManager.getConnection(connectionUrl, "sa", "123");
 
 //            String connectionUrl = "jdbc:sqlserver://LAPTOP-HLRA9EFE\\SQLEXPRESS:1433;databaseName=CuaHangSach;encrypt=false";            
